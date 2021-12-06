@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Theme.AppCompat.NoActionBar"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@drawable/background_back"
+    tools:context=".main.MainActivity">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/back_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="70dp"
+        />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:elevation="1dp"
+        app:behavior_peekHeight="70dp"
+        android:id="@+id/filter_fragment"
+        android:name="com.genndy.swaggerhubevents.main.backdropfragment.WindowFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:behavior_skipCollapsed="true"
+        app:layout_behavior="com.genndy.matches.backdrop.GestureLockedBottomSheetBehavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

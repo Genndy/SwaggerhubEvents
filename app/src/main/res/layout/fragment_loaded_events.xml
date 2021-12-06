@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:background="#343434">
+
+    <ImageView
+        android:id="@+id/fragment_loaded_downloading_indicator"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:src="@drawable/avd_downloading"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/fragment_loaded_events_message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="#fff"
+        android:gravity="center"
+        android:textSize="40sp"
+        android:text="Loaded Events"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fragment_loaded_events_view"
+        tools:visibility="gone"
+        tools:listitem="@layout/item_event"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
